@@ -1,0 +1,11 @@
+---
+
+- hosts: test-server
+  tasks:
+
+   - name: Transfer the script
+     copy: src=/opt/LDAP_users.sh dest=/opt/
+
+   - name: Execute the script
+     shell: sh /opt/LDAP_users.sh
+
